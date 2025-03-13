@@ -1,0 +1,18 @@
+.banner{
+    background-image: url(https://img.freepik.com/free-photo/digital-lavender-interior-design_23-2151561244.jpg?ga=GA1.1.636714123.1741677098&semt=ais_hybrid);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+
+}
+
+
+.cover{
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    opacity: 0.4;
+
+}
+
