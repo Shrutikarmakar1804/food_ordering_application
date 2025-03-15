@@ -4,27 +4,32 @@ import CreateIcon from '@mui/icons-material/Create';
 import { Delete } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 
-const orders=[1,1,1];
+const orders=[{id: 1}, {id: 2}, {id: 3}];
  
 
 export default function MenuTable() {
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
    const [ open, setOpen] = React.useState(false);
     const handleOpen = () =>{
        setOpen(true);
     };
 
+    const handleAddMenuClick = () => {
+      navigate("/admin/restaurants/add-menu");
+    };
+
   return (
     <Box>
-      <Card sx={{ mt: 1 }}>
-        <CardHeader action={
-            <IconButton onClick={handleOpen} aria-label="settings">
+      <Card className='mt-1' >
+        <CardHeader 
+        action={
+            <IconButton onClick={handleAddMenuClick} aria-label="settings">
             <CreateIcon />
           </IconButton>
         } 
-        title="Menu" 
-        sx={{pt:5,alignItems:"center"}} 
-        />
+        title= { "Menu" }
+        sx={{pt:5,alignItems:"center"}} />
          <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>

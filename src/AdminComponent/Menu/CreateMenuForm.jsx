@@ -11,9 +11,9 @@ const initialValues = {
   price: "",
   category: "",
   restaurantId:"",
-  vegetarian:true,
-  seasonal:false,
   ingredients:[],
+  seasonal:false,
+  vegetarian:true,
   images:[],
 };
 
@@ -55,19 +55,18 @@ const CreateMenuForm = () => {
               onChange={handleImageChange}
               type='file' />
 
-              <label className='relative' htmlFor="fileInput">
-              <span 
-                className='w-24 h-24 cursor-pointer flex items-center justify-center 
-              p-3 bprder rounded-md border-gray-600 '>
-                <AddPhotoAlternate className='text-white' />
-
-              </span>
-              {
-                uploadImage && <div className="absolute top-0 bottom-0 right-0 left-0 w-24 h-24 flex items-center justify-center">
-                  <CircularProgress />
-                </div>
-              }
-            </label>
+              <label className='relative' htmlFor="fileinput">
+                <span 
+                  className='w-24 h-24 cursor-pointer flex items-center justify-center 
+                  p-3 bprder rounded-md border-gray-600 '>
+                  <AddPhotoAlternate className='text-white' />
+                </span>
+                {
+                  uploadImage && <div className="absolute top-0 bottom-0 right-0 left-0 w-24 h-24 flex items-center justify-center">
+                    <CircularProgress />
+                  </div>
+                }
+              </label>
             <div
             className="flex flex-wrap gap-2">
               {(formik.values.images).map((image,index)=>
@@ -125,32 +124,32 @@ const CreateMenuForm = () => {
             </TextField>
 
           </Grid2>
-          <Grid2 item xs={12}>
+          <Grid2 item xs={12} lg="6">
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Category</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   value={formik.values.category}  
-                  label="Category"
+                  label="Food Category"
                   onChange={formik.handleChange}
                   name="category"
                 >
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
+                  <MenuItem value={10}>Biryani</MenuItem>
+                  <MenuItem value={20}>pizza</MenuItem>
+                  <MenuItem value={30}>KFC</MenuItem>
                 </Select>
               </FormControl>
               </Grid2>
 
               <Grid2 item xs={12}>
             <TextField fullWidth
-            label="Price"
-            id="price"
-            name="price"
+            label="RestaurantId"
+            id="restaurantId"
+            name="restaurantId"
             variant="outlined"
             onChange={formik.handleChange}
-            value={formik.values.price}
+            value={formik.values.restaurantId}
             >
 
             </TextField>
@@ -232,4 +231,4 @@ const CreateMenuForm = () => {
   )
 }
 
-export default CreateMenuForm
+export default CreateMenuForm;

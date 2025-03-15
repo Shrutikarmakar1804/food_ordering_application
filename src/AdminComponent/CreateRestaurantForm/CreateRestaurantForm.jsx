@@ -73,7 +73,7 @@ const CreateRestaurantForm = () => {
       </h1>
       <form onSubmit={formik.handleSubmit} className="spy-5">
         <Grid2 container spacing={5}>
-          <Grid2 className="flex flex-wrap gap-3" item xs={12} lg={6}>
+          <Grid2 className="flex flex-wrap gap-3" item xs={12}>
               <input
               accept='image/*'
               id='fileinput'
@@ -110,39 +110,39 @@ const CreateRestaurantForm = () => {
                  </IconButton>
 
               </div>)}
+              
 
             </div>
 
           </Grid2>
-          <Grid2 item xs={12}>
+          
+            <Grid2 item xs={12}>
             <TextField fullWidth
-            label="Name"
-            id="name"
-            name="name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-            >
-
-            </TextField>
-
+              id="name"
+              name="name"
+              label="Name"
+              variant="outlined"
+              onChange={formik.handleChange}
+              value={formik.values.name}
+            />
           </Grid2>
           <Grid2 item xs={12}>
-            <TextField fullWidth
-            label="description"
-            id="description"
-            name="description"
-            onChange={formik.handleChange}
-            value={formik.values.description}
-            >
-
-            </TextField>
+            <TextField fullWidth              
+              id="description"
+              name="description"
+              label="Description"
+              variant="outlined"
+              onChange={formik.handleChange}
+              value={formik.values.description}
+            />
 
           </Grid2>
-          <Grid2 item xs={12}>
+          
+          <Grid2 item xs={12} lg={6}>
             <TextField fullWidth
-            label="Cuisine Type"
             id="cuisineType"
             name="cuisineType"
+            label="Cuisine Type"
             variant="outlined"
             onChange={formik.handleChange}
             value={formik.values.cuisineType}
@@ -153,33 +153,25 @@ const CreateRestaurantForm = () => {
           </Grid2>
           
 
-          <Grid2 item xs={12}>
-            <TextField fullWidth
-            label="Street Address"
-            id="streetAddress"
-            name="streetAddress"
-            variant="outlined"
-            onChange={formik.handleChange}
-            value={formik.values.streetAddress}
-            >
-
-            </TextField>
-
-          </Grid2>
-
-          <Grid2 item xs={12} lg="4">
-            <TextField fullWidth
-            label="City"
-            id="city"
-            name="city"
-            variant="outlined"
-            onChange={formik.handleChange}
-            value={formik.values.city}
-            >
-
-            </TextField>
-
-          </Grid2>
+                <Grid2 item xs={12}>
+        <TextField fullWidth
+          id="streetAddress"
+          name="streetAddress"
+          label="Street Address"
+          variant="outlined"
+          onChange={formik.handleChange}
+          value={formik.values.streetAddress}
+        />
+      </Grid2>
+      <Grid2 item xs={12}>
+        <TextField fullWidth
+          label="City"
+          id="city"
+          name="city"
+          onChange={formik.handleChange}
+          value={formik.values.city}
+        />
+      </Grid2>
 
 
           <Grid2 item xs={12}>
@@ -195,7 +187,7 @@ const CreateRestaurantForm = () => {
             </TextField>
 
           </Grid2>
-          <Grid2 item xs={12} lg="4">
+          <Grid2 item xs={12} lg={6}>
             <TextField fullWidth
             label="Postal Code"
             id="postalCode"
@@ -209,7 +201,7 @@ const CreateRestaurantForm = () => {
 
           </Grid2>
 
-          <Grid2 item xs={12} lg="4">
+          <Grid2 item xs={12} lg={6}>
             <TextField fullWidth
             label="Country"
             id="country"
@@ -223,7 +215,7 @@ const CreateRestaurantForm = () => {
 
           </Grid2>
 
-          <Grid2 item xs={12} lg="6">
+          <Grid2 item xs={12} lg={6}>
             <TextField fullWidth
             label="Email"
             id="email"
@@ -237,7 +229,7 @@ const CreateRestaurantForm = () => {
 
           </Grid2>
 
-          <Grid2 item xs={12} lg="6">
+          <Grid2 item xs={12} lg={6}>
             <TextField fullWidth
             label="Phone Number"
             id="mobile"
@@ -307,7 +299,7 @@ const CreateRestaurantForm = () => {
 
           </Grid2>
         </Grid2>
-        <Button variant="contained" color="primary" type="submit">Create Restaurent</Button>
+        <Button variant="contained" color="primary" type="submit">Create Restaurant</Button>
       </form>
      </div>
     </div>
